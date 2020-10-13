@@ -7,11 +7,11 @@
 <form asp-action="Solve">
     <div class="row">
         <div class="col">
-            <input type="text" name="userNum1" />
+            <input class="userInput" type="text" name="userNum1" />
 
         </div>
         <div class="col">
-            <input type="text" name="userNum2"/>
+            <input class="userInput" type="text" name="userNum2"/>
 
         </div>
         <div class="col">
@@ -36,3 +36,20 @@
     </div>
 </div>
 
+<script type="text/javascript">
+    var userInputs = document.getElementsByClassName('userInput');
+
+    for (let i = 0; i < userInputs.length; i++) {
+        userInputs[i].addEventListener("keypress", function (evt) {
+            var character = (evt.which) ? evt.which : evt.keyCode;
+            if (character >= 48 && character <= 57) {
+                evt.returnValue = true;
+            }
+            else {
+                evt.returnValue = false;
+            }
+        });
+    }
+        
+
+</script>
