@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Solve";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<form asp-action="Solve">
+    <div class="row">
+        <div class="col">
+            <input type="text" name="userNum1" />
+
+        </div>
+        <div class="col">
+            <input type="text" name="userNum2"/>
+
+        </div>
+        <div class="col">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+
+    </div>
+</form>
+
+<hr />
+
+<div class="row">
+    <div class="col">
+        The calculated output is : @ViewData["FizzBuzzOutput"]
+    </div>
+</div>
+
