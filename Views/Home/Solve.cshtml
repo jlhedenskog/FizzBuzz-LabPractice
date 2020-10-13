@@ -25,7 +25,14 @@
 
 <div class="row">
     <div class="col">
-        The calculated output is : @ViewData["FizzBuzzOutput"]
+        <p>The calculated output is :</p> 
+        
+        <div class="row">
+            @foreach (var i in (string[])ViewData["FizzBuzzOutput"])
+            {
+                <div class="col-3">@i</div>
+            }
+            </div>
     </div>
 </div>
 

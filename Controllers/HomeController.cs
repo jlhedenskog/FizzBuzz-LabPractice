@@ -26,6 +26,7 @@ namespace FizzBuzz_LabPractice.Controllers
 
         public IActionResult Solve()
         {
+            ViewData["FizzBuzzOutput"] = new string[0];
             return View();
         }
 
@@ -42,7 +43,7 @@ namespace FizzBuzz_LabPractice.Controllers
                 
                 if (fizzBug == 0 && buzzBug == 0)
                 {
-                    output += "Fizzbuzz "; 
+                    output += "FizzBuzz "; 
                 }
                 else if (fizzBug == 0)
                 {
@@ -58,7 +59,7 @@ namespace FizzBuzz_LabPractice.Controllers
                 }
             }
 
-            ViewData["FizzBuzzOutput"] = output;
+            ViewData["FizzBuzzOutput"] = output.Split(" ");
             return View();
         }
 
